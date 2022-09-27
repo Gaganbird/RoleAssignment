@@ -1,0 +1,48 @@
+﻿<div ng-controller="setting_users" class="vj-ux-manager">
+    <uiengine provider="AngularBootstrap" identifier="setting_users" class="uiengine-wrapper scrollbar">
+        <uilayout name="default">
+            <uielement name="AllUsers" control="grid" pagesize="13" attr-pagesize="13" paged="true" search="false" label="false" attr-class="table-responsive table-grid" attr-st-pipe="Pipe_AllUserPagging">
+                <column name="DisplayName" width="44">
+                    <uitemplate>
+                        <div class="vanjaro-users">
+                            <span>{{row.DisplayName}} <strong>({{row.Username}})</strong></span>
+                            <div>{{row.Institution}} | {{row.Country}}</div>
+                        </div>
+                    </uitemplate>
+                </column>
+                <column name="Delta" width="6">
+                    <uitemplate>
+                        <input type="checkbox" ng-model="row.Delta" />
+                    </uitemplate>
+                </column>
+                <column name="NMR" width="6">
+                    <uitemplate>
+                        <input type="checkbox" ng-model="row.NMR" />
+                    </uitemplate>
+                </column>
+                <column name="Waiting" width="6">
+                    <uitemplate>
+                        <input type="checkbox" ng-model="row.Waiting" ng-checked="row.Waiting == 'True'" />
+                    </uitemplate>
+                </column>
+                <column name="Delete" width="6">
+                    <uitemplate>
+                        <input type="checkbox" ng-model="row.Delete" />
+                    </uitemplate>
+                </column>
+            </uielement>
+            <uitemplate>
+                <div class="search-info-msg" mn-ng-show="ui.data.AllUsers.Options.length<=0">[L:UsersNotAvailable]</div>
+            </uitemplate>
+            <uitemplate>
+                <div class="text-end fixed-footer">
+                    <button type="button" class="btn btn-sm btn-primary" ng-click="Click_Update()">
+                        [L:Update]
+                    </button>
+                </div>
+            </uitemplate>
+        </uilayout>
+    </uiengine>
+</div>
+
+

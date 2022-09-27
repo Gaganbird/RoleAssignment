@@ -1,0 +1,39 @@
+﻿<dotnetnuke type="Package" version="6.0">
+	<packages>
+		<package name="RoleAssignment" type="Library" version="01.00.00">
+			<friendlyName>Role Assignment</friendlyName>
+			<description></description>
+			<iconFile></iconFile>
+			<owner>
+				<name>Vanjaro</name>
+				<organization>Vanjaro</organization>
+				<url>https://www.vanjaro.com</url>
+				<email>support@vanjaro.com</email>
+			</owner>			
+			<releaseNotes src="release.txt" />
+			<azureCompatible>true</azureCompatible>			
+			<components>				
+				<component type="Assembly">
+					<assemblies>
+						<assembly>
+							<path>bin</path>
+							<name>JEOLUSA.UXManager.Extensions.Menu.RoleAssignment.dll</name>
+							<version>01.00.00</version>
+						</assembly>
+					</assemblies>
+				</component>
+				<component type="ResourceFile">
+					<resourceFiles>
+						<basePath>DesktopModules\Vanjaro\UXManager\Extensions\Menu\RoleAssignment</basePath>
+						<resourceFile>
+							<name>Resources.zip</name>
+						</resourceFile>
+					</resourceFiles>
+				</component>
+			</components>
+		</package>
+	</packages>
+</dotnetnuke>
+
+
+
